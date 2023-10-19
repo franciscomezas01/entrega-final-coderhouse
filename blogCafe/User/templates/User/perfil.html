@@ -1,0 +1,41 @@
+{% extends 'CursosApp/base.html' %}
+
+{% load static %}
+
+{% block title %} Perfil {{User.usuario}} {% endblock title %}
+
+{% block section1 %}
+
+<br>
+<br>
+<br>
+
+
+<div class="container text-center">
+    <h1>Editar Perfil</h1>
+</div>
+
+<div class="container">
+
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <table>
+
+            {{ mi_form.as_table }}
+            <input type="submit" value="Actualizar">
+
+        </table>
+
+
+    </form>
+</div>
+<br>
+
+<p class="text-center"> Cambiar la contraseña?<a href="{% url 'cambiar_password' %}"> Haz click acá</a></p>
+
+<br>
+<br>
+<br>
+<br>
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends "CursosApp/base.html"%}
+{% load static %}
+
+{% block title %} Nosotros {% endblock title %}
+
+{% block section1 %}
+<link href="{% static 'CursosApp/css/team.css' %}" rel="stylesheet" />
+<br>
+<br>
+<br>
+<section class="page-section bg-light" id="team">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Equipo Coder</h2>
+            <br>
+            <h3 class="section-subheading text-muted">el grupo que desarrollo este proyecto esta conformado por:</h3>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="{% static 'CursosApp/assets/img/franciscomm.jpeg' %}" alt="..." />
+                    <h4>Francisco Mezas</h4>
+                    <p class="text-muted">Soy tecnico electronico y becario en la universidad di tella en la carrera tecnologia digital. Me uni a este curso debido a que es uno de los lenguajes de programacion mas usados y considero que es una muy buena herramienta para mi desarrollo</p>
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/francisco-mezas-b38787267?lipi=urn%3Ali%3Apage%3Ad_learning_feed%3BuxDUqt7uTMi9kiTOZwOFSw%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_learning_feed-view_profile" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="{% static 'CursosApp/assets/img/elias.jpeg' %}" alt="..." />
+                    <h4>Elias Escalante</h4>
+                    <p class="text-muted">Soy estudiante de la licenciatura en programación universitaria en la  UNQUI.  Me uní a este curso para aprender más sobre este mundo que es la programación  y desde un punto de vista que no conocía hasta ahora que es el desarrollo web.</p>
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/elias-escalante/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" aria-label="Diana Petersen LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="team-member">
+                    <img class="mx-auto rounded-circle" src="{% static 'CursosApp/assets/img/daniela.jpeg' %}" alt="..." />
+                    <h4>Daniela Erario</h4>
+                    <p class="text-muted">Soy kinesiolga. Me uni a este curso por curiosidad, para ver un poco el mundo de la programacion y aprender algo mas alla de mi profesion</p>
+                    <br>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Decidimos realizar el proyecto final de forma grupal porque consideramos que esta experiencia es positiva y enriquecedora, ya que no solo requiere de conocimientos de Django y Git sino que también depende de la colaboración e intercambio de ideas entre los miembros del grupo.</p></div>
+        </div>
+        <br>
+        <br>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

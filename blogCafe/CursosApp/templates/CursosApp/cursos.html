@@ -1,0 +1,76 @@
+{% extends "CursosApp/base.html"%}
+{% load static %}
+
+{% block title %} Cursos {% endblock title %}
+
+{% block section1 %}
+ <link href="{% static 'CursosApp/css/tarjetas.css' %}" rel="stylesheet"/> 
+
+{% if not request.user.is_authenticated %}
+<br>
+<br>
+<br>
+<br>
+    <center>
+        <h2>Debes iniciar sesión...</h2>
+    </center>
+
+<br>
+{% endif %}
+{% if request.user.is_authenticated %}
+    <body>
+        <br>
+        <br>
+        <br>
+        <br>
+
+            <center>
+                <h1> Cursos de Cafe - Barista</h1>
+                <br>
+                <br>
+            </center>
+
+                <div class="row">
+                    {% for curso in cursos %}
+                        <div class="card" >
+                            <img src="{{curso.imagen.url}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h3 class="card-title">{{ curso.nombre }}</h3>
+                            <p class="card-text">TUTOR: {{ curso.tutor }}</p>
+                            <a href= "{% url 'Detalle' curso.id   %}" class="btn btn-primary">Ver</a>
+                            <a href="{% url 'formulario_inscripcion' curso_id=curso.id %}" class="btn btn-primary">Consultar</a>
+                            {% if request.user.is_superuser %}
+                            <a href= "{% url 'Editar' curso.id   %}" class="btn btn-primary">Editar</a>
+                            <a href= "{% url 'Borrar' curso.id   %}" class="btn btn-primary">Borrar</a>
+                            {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                    {% if request.user.is_superuser %}
+                    <a href= "{% url 'Nuevo' %}"> Agregar un Curso</a>
+                    {% endif %}
+                </div>
+            <br>
+            <br>
+
+    </body>
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
